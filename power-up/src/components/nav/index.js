@@ -1,6 +1,5 @@
 import React from 'react';
 import 'bulma/css/bulma.min.css';
-import logoImage from "../../assets/graphics/power-up-logo.jpg";
 function Nav() {
 
     return (
@@ -21,10 +20,10 @@ function Nav() {
         </div>
         <div id='navbarBasicExample' className='navbar-menu'>
           <div className='navbar-end'>
-            <div className='navbar-item'>
-              <a href='/' className='navbar-item'>
-                Log In
+          <a href='/' className='navbar-item'>
+                Sign In
               </a>
+            <div className='navbar-item'>
               <a href='/' className='navbar-item'>
                 Sign Up
               </a>
