@@ -12,7 +12,7 @@ const typeDefs = gql`
     }
 
     type Exercise {
-        exersiseId: String
+        exerciseId: String
         equipment: String
         bodyPart: String
         gifUrl: String
