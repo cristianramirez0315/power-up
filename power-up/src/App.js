@@ -1,7 +1,8 @@
 import React from 'react';
 import Nav from './components/nav';
 import Homepage from './components/homepage';
-
+import 'bulma/css/bulma.min.css';
+import '../src/main.scss';
 
 function App() {
 
@@ -14,5 +15,7 @@ function App() {
     </div>
   );
 }
+
+
 
 export default App;
