@@ -13,6 +13,7 @@ const typeDefs = gql`
 
     type Exercise {
         exersiseId: String
+        equipment: String
         bodyPart: String
         gifUrl: String
         name: String
@@ -26,6 +27,7 @@ const typeDefs = gql`
 
     input exerciseInput {
         exerciseId: String
+        equipment: String
         bodyPart: String
         gifUrl: String
         name: String
