@@ -22,6 +22,9 @@ function Header() {
         </div>
         <div id='navbarBasicExample' className='navbar-menu'>
           <div className='navbar-end'>
+          <a href='/powerupapp' className='navbar-item'>
+                Power Up
+              </a>
           <a href='/login' className='navbar-item'>
                 Log In
               </a>
@@ -29,6 +32,7 @@ function Header() {
               <a href='/signup' className='navbar-item'>
                 Sign Up
               </a>
+
             </div>
           </div>
         </div>

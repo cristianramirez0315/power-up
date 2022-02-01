@@ -9,6 +9,7 @@ import Homepage from './components/homepage';
 import Footer from './components/footer';
 import Login from '../src/pages/login';
 import Signup from '../src/pages/signup';
+import Powerupapp from '../src/pages/powerupapp';
 
 //Page Components
 
@@ -40,6 +41,7 @@ function App() {
                 <Route exact path="/" component={Homepage} />
                 <Route exact path="/login" component={Login} />
                 <Route exact path="/signup" component={Signup} />
+                <Route exact path="/powerupapp" component={Powerupapp} />
               </Switch>
             </div>
           <Footer />
