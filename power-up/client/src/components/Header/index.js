@@ -1,6 +1,8 @@
 import React from 'react';
 import 'bulma/css/bulma.min.css';
-function Nav() {
+import { Link } from 'react-router-dom';
+
+function Header() {
 
     return (
       <nav className='navbar' role='navigation' aria-label='main navigation'>
@@ -20,11 +22,11 @@ function Nav() {
         </div>
         <div id='navbarBasicExample' className='navbar-menu'>
           <div className='navbar-end'>
-          <a href='/' className='navbar-item'>
-                Sign In
+          <a href='/login' className='navbar-item'>
+                Log In
               </a>
             <div className='navbar-item'>
-              <a href='/' className='navbar-item'>
+              <a href='/signup' className='navbar-item'>
                 Sign Up
               </a>
             </div>
@@ -34,4 +36,4 @@ function Nav() {
     )
 }
 
-export default Nav;
+export default Header;
