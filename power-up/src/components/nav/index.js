@@ -28,6 +28,11 @@ function Nav() {
                 Sign Up
               </a>
             </div>
+            <div className='navbar-item'>
+              <a href='/' className='navbar-item'>
+                Dashboard
+              </a>
+            </div>
           </div>
         </div>
       </nav>

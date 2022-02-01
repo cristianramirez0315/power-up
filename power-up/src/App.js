@@ -5,6 +5,7 @@ import '../src/main.scss';
 // Components of the page
 import Nav from './components/nav';
 import Homepage from './components/homepage';
+import Powerupapp from './pages/powerupapp';
 
 //Page Components
 
@@ -25,6 +26,7 @@ function App() {
       <main>
         <Nav></Nav>
         <Homepage></Homepage>
+        <Powerupapp></Powerupapp>
       </main>
     </div>
   );
