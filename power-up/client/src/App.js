@@ -3,8 +3,8 @@ import 'bulma/css/bulma.min.css';
 import '../src/main.scss';
 
 // Components of the page
-import Nav from '../components/nav';
-import Homepage from '../components/homepage';
+import Nav from './components/nav';
+import Homepage from './components/homepage';
 
 //Page Components
 
