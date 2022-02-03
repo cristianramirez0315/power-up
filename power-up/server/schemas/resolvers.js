@@ -1,5 +1,5 @@
-
-const { AuthenticationError, UserInputError} = require('apollo-server-express');
+const { User } = require('../models')
+const { AuthenticationError } = require('apollo-server-express');
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
@@ -23,6 +23,13 @@ const resolvers = {
             const token = signToken(user);
 
             return { token, user };
+        },
+        updateUser: async (parent, args, context) => {
+            if (context.user) {
+                return await User.findByIdAndUpdate(context.user._id, args, { new: true });
+            }
+
+            throw new AuthenticationError('Nog logged in');
         },
         login: async (parent, { email, password }) => {
             const user = await User.findOne({ email });
