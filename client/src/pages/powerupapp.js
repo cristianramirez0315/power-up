@@ -10,7 +10,7 @@ useEffect(() => {
     "method": "GET",
     "headers": {
         "x-rapidapi-host": "exercisedb.p.rapidapi.com",
-        "x-rapidapi-key": "5f63023f83msh83cf10d432a7b75p1534f3jsnb0aad54e672d"
+        "x-rapidapi-key": "cf4213a26cmsh0eb979481a6fedap1d2f18jsna1a0e5a15e15"
     }
 })
 .then(response => {
