@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import 'bulma/css/bulma.min.css';
 
+
+
+
 const Powerupapp = () => {
   const [exercises, setExercises] = useState([]);
 useEffect(() => {
@@ -29,8 +32,17 @@ useEffect(() => {
   const exerciseCurrent = exercises.filter(exercise => exercise.target="abs");
 
   return (
-    <div className="container">
-        This is words to test
+      <div>
+
+
+
+
+
+
+
+
+
+
         {/* { exercises.length>0  && exercises.map (exercise => {
             return (
             <div>
@@ -55,7 +67,7 @@ useEffect(() => {
 
 
 
-        }
+    }
     </div>
   );
 };

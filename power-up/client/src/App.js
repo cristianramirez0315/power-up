@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import 'bulma/css/bulma.min.css';
-import '../src/main.scss';
+import '../src/index.scss';
 import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
 // Components of the page
 import Header from './components/Header';

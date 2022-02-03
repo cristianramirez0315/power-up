@@ -7,7 +7,6 @@ function Header() {
     return (
       <nav className='navbar' role='navigation' aria-label='main navigation'>
         <div className='navbar-brand'>
-  
           <a
             role='button'
             className={'navbar-burger burger'}
@@ -22,9 +21,15 @@ function Header() {
         </div>
         <div id='navbarBasicExample' className='navbar-menu'>
           <div className='navbar-end'>
+
           <a href='/powerupapp' className='navbar-item'>
                 Power Up
               </a>
+
+          <a href='/' className='navbar-item'>
+                Home
+              </a>
+
           <a href='/login' className='navbar-item'>
                 Log In
               </a>
