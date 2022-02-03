@@ -1,15 +1,15 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import 'bulma/css/bulma.min.css';
-import '../src/main.scss';
+import './main.scss';
 import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
 // Components of the page
 import Header from './components/Header';
 import Homepage from './components/homepage';
 import Footer from './components/footer';
-import Login from '../src/pages/login';
-import Signup from '../src/pages/signup';
-import Powerupapp from '../src/pages/powerupapp';
+import Login from './pages/login';
+import Signup from './pages/signup';
+import Powerupapp from './pages/powerupapp';
 
 //Page Components
 
