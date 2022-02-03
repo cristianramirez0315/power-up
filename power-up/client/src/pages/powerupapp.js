@@ -3,6 +3,7 @@ import 'bulma/css/bulma.min.css';
 
 const Powerupapp = () => {
   const [exercises, setExercises] = useState([]);
+  const [currentExercises, setCurrentExercises] = useState([]);
 useEffect(() => {
     fetch("https://exercisedb.p.rapidapi.com/exercises", {
     "method": "GET",
@@ -27,19 +28,26 @@ useEffect(() => {
   }, []);
 
 
-  const exerciseCurrent = exercises.filter(exercise => exercise.target="abs");
   function exercise (type){
     //   onclick={exercise("abs")}
       switch(type){
           case "abs":
             //   change exrcisecurrent into a usestate variable 
-            const exerciseCurrent = exercises.filter(exercise => exercise.target="abs");
+             setCurrentExercises(exercises.filter(exercise => exercise.target==="abs"));
+            break
+          case "quads":
+            //   change exrcisecurrent into a usestate variable 
+            console.log(currentExercises)
+             setCurrentExercises(exercises.filter(exercise => exercise.target==="quads"));
+             
             break
       }
   }
 
   return (
     <div className="container">
+      <button onClick= {()=> exercise("abs")}>Abs</button>
+      <button onClick= {()=> exercise("quads")}>quads</button>
         This is words to test
         {/* { exercises.length>0  && exercises.map (exercise => {
             return (
@@ -53,11 +61,12 @@ useEffect(() => {
         
         */}
 
-        {exerciseCurrent.length>0 && exerciseCurrent.slice(0,5).map (exercise => {
+        {currentExercises.length>0 && currentExercises.slice(0,5).map (exercise => {
             return (
 
             <div>
             <p>{exercise.target}</p>
+            <p>{exercise.id}</p>
             <img src={exercise.gifUrl}></img>
             </div>
             )
