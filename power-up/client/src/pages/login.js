@@ -40,7 +40,7 @@ const Login = (props) => {
     });
   };
 
-  eturn (
+  return (
     <div classname= "hero-body">
       <div classname= "container">
       <div class="columns is-centered">
