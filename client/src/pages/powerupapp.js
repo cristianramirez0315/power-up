@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import 'bulma/css/bulma.min.css';
+import { Button } from 'react-bulma-components';
 
 const Powerupapp = () => {
   const [exercises, setExercises] = useState([]);
@@ -46,7 +47,7 @@ useEffect(() => {
 
   return (
     <div className="container">
-      <button onClick= {()=> exercise("abs")}>Abs</button>
+      <button className="primary" onClick= {()=> exercise("abs")}>Abs</button>
       <button onClick= {()=> exercise("quads")}>quads</button>
         This is words to test
         {/* { exercises.length>0  && exercises.map (exercise => {
