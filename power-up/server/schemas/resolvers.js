@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 const { User } = require('../models')
 const { AuthenticationError } = require('apollo-server-express');
+=======
+const { AuthenticationError, UserInputError } = require('apollo-server-express');
+const { User } = require('../models');
+>>>>>>> 5d368b075dcbf69db7b6338ba098d9475f3447b7
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
