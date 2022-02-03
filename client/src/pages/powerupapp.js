@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import 'bulma/css/bulma.min.css';
+import { Button } from 'react-bulma-components';
 
 const Powerupapp = () => {
   const [exercises, setExercises] = useState([]);
@@ -41,14 +42,45 @@ useEffect(() => {
              setCurrentExercises(exercises.filter(exercise => exercise.target==="quads"));
              
             break
+          case "lats":
+            //   change exrcisecurrent into a usestate variable 
+            console.log(currentExercises)
+             setCurrentExercises(exercises.filter(exercise => exercise.target==="lats"));
+             
+            break
+          case "calves":
+            //   change exrcisecurrent into a usestate variable 
+            console.log(currentExercises)
+             setCurrentExercises(exercises.filter(exercise => exercise.target==="calves"));
+             
+            break
+          case "glutes":
+            //   change exrcisecurrent into a usestate variable 
+            console.log(currentExercises)
+             setCurrentExercises(exercises.filter(exercise => exercise.target==="glutes"));
+             
+            break
       }
   }
 
   return (
-    <div className="container">
-      <button onClick= {()=> exercise("abs")}>Abs</button>
-      <button onClick= {()=> exercise("quads")}>quads</button>
-        This is words to test
+    <div className="container coulmns">
+      <div class="hero is-small is-link">
+        <div class="hero-body">
+          <h1 class="title">Target Category</h1> 
+        </div>
+        
+      </div>
+      
+      <div className="buttons columns">
+        <button class="button is-info is-large column is-one-sixth" onClick= {()=> exercise("abs")}>Abs</button>
+        <button class="button is-info is-large column is-one-sixth" onClick= {()=> exercise("quads")}>Quads</button>
+        <button class="button is-info is-large column is-one-sixth" onClick= {()=> exercise("lats")}>Lats</button>
+        <button class="button is-info is-large column is-one-sixth" onClick= {()=> exercise("calves")}>Calves</button>
+        <button class="button is-info is-large column is-one-sixth" onClick= {()=> exercise("glutes")}>Glutes</button>
+      </div>
+      
+        
         {/* { exercises.length>0  && exercises.map (exercise => {
             return (
             <div>
@@ -61,13 +93,32 @@ useEffect(() => {
         
         */}
 
-        {currentExercises.length>0 && currentExercises.slice(0,5).map (exercise => {
+        {currentExercises.length>0 && currentExercises.slice(0,10).map (exercise => {
             return (
 
-            <div>
-            <p>{exercise.target}</p>
-            <p>{exercise.id}</p>
-            <img src={exercise.gifUrl}></img>
+              
+
+            <div class="card">
+              <div class="card-image">
+                <figure class="image is-128x128">
+                  <img src={exercise.gifUrl}></img>
+                </figure>
+              </div>
+
+            <div class="card-content">
+              <div class="media">
+                <div class="media-content">
+                  <p class="title is-4">{exercise.name}</p>
+                  <p class="subtitle is-6">{exercise.target}</p>
+                  <button class="button is-success">Save to profile</button>
+          
+                </div>
+
+              </div>
+            </div>
+            
+            
+            
             </div>
             )
             
