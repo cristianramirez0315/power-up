@@ -26,7 +26,17 @@ useEffect(() => {
     
   }, []);
 
+
   const exerciseCurrent = exercises.filter(exercise => exercise.target="abs");
+  function exercise (type){
+    //   onclick={exercise("abs")}
+      switch(type){
+          case "abs":
+            //   change exrcisecurrent into a usestate variable 
+            const exerciseCurrent = exercises.filter(exercise => exercise.target="abs");
+            break
+      }
+  }
 
   return (
     <div className="container">
@@ -43,8 +53,9 @@ useEffect(() => {
         
         */}
 
-        {exerciseCurrent.length>0 && exerciseCurrent.map (exercise => {
+        {exerciseCurrent.length>0 && exerciseCurrent.slice(0,5).map (exercise => {
             return (
+
             <div>
             <p>{exercise.target}</p>
             <img src={exercise.gifUrl}></img>
