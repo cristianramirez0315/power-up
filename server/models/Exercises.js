@@ -8,6 +8,8 @@ const exerciseSchema = new Schema({
     },
     equipment: {
 
+        type: String
+
     },
     bodyPart: {
         type: String

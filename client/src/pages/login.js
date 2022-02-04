@@ -1,6 +1,8 @@
 import 'bulma/css/bulma.min.css';
 import React, { useState } from 'react';
+
 import { useMutation } from '@apollo/client';
+
 import { LOGIN_USER } from '../utils/mutations';
 
 import Auth from '../utils/auth';
@@ -41,6 +43,7 @@ const Login = (props) => {
   };
 
   return (
+
     <div classname= "hero-body">
       <div classname= "container">
       <div class="columns is-centered">
@@ -85,3 +88,4 @@ const Login = (props) => {
 };
 
 export default Login;
+

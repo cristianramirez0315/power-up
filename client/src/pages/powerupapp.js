@@ -1,16 +1,20 @@
 import React, { useEffect, useState } from "react";
 import 'bulma/css/bulma.min.css';
+
 import { Button } from 'react-bulma-components';
 
 const Powerupapp = () => {
   const [exercises, setExercises] = useState([]);
   const [currentExercises, setCurrentExercises] = useState([]);
+
 useEffect(() => {
     fetch("https://exercisedb.p.rapidapi.com/exercises", {
     "method": "GET",
     "headers": {
         "x-rapidapi-host": "exercisedb.p.rapidapi.com",
+
         "x-rapidapi-key": "cf4213a26cmsh0eb979481a6fedap1d2f18jsna1a0e5a15e15"
+
     }
 })
 .then(response => {
@@ -81,6 +85,7 @@ useEffect(() => {
       </div>
       
         
+
         {/* { exercises.length>0  && exercises.map (exercise => {
             return (
             <div>
@@ -92,6 +97,7 @@ useEffect(() => {
         })
         
         */}
+
 
         {currentExercises.length>0 && currentExercises.slice(0,10).map (exercise => {
             return (
@@ -119,6 +125,7 @@ useEffect(() => {
             
             
             
+
             </div>
             )
             
